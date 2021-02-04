@@ -27,4 +27,4 @@ local.properties
 # Locally stored Eclipse launch configurations
 *.launch
 
-**/.DS_store
+.DS_Store
