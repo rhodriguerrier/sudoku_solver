@@ -6,7 +6,7 @@ import java.util.List;
 public class Solver {
 	
 	// Recursive function applies backtracking graph colouring
-	boolean graphColouring(int squareIndex, int possibleColours,
+	static boolean graphColouring(int squareIndex, int possibleColours,
 			ArrayList<Integer> givenColours, Graph<Integer> graph) {
 		
 		if (squareIndex == graph.getSize()) {
@@ -29,7 +29,7 @@ public class Solver {
 	}
 	
 	// Function checks whether a given colour can be used on a specified vertex
-	boolean isSafeColour(int squareIndex, int colourCode,
+	static boolean isSafeColour(int squareIndex, int colourCode,
 			ArrayList<Integer> givenColours, Graph<Integer> graph) {
 		if (givenColours.contains(squareIndex) && graph.getSquareVal(squareIndex) == colourCode)
 			return true;

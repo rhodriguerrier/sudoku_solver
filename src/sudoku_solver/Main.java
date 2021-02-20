@@ -29,8 +29,7 @@ public class Main {
 		printSudokuState(startSquares, sudokuLength);
 		
 		// Send info to solver class to fill sudoku
-		Solver solveSudoku = new Solver();
-		if (solveSudoku.graphColouring(0, sudokuLength, givenColoursIndices, myGraph)) {
+		if (Solver.graphColouring(0, sudokuLength, givenColoursIndices, myGraph)) {
 			Map<Integer, Integer> finalSquares = myGraph.getSudokuValues();
 			System.out.println("After:");
 			printSudokuState(finalSquares, sudokuLength);
